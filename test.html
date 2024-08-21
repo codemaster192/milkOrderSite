@@ -1,0 +1,93 @@
+<!-- 
+    desc: index file.
+    author: Santiago
+    date: 08/20/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+    <!-- attribute coords of <map> tag is responsived -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            imageMapResize();
+        });
+    </script>
+    <link rel="stylesheet" href="css/Homepage.css">
+</head>
+
+<body>
+
+    <div class="responsive-image-container">
+        <img id="image" src="image/Image_4.jpg" usemap="#example-map" />
+        <div id="highlight-area" class="highlight-area"></div>
+    </div>
+
+    <map name="example-map">
+        <area id="example-area" shape="rect" coords="80, 500, 140, 550" alt="Example" onclick="openNav()">
+    </map>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNav() {
+            document.getElementById("myNav").style.width = "30%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+        function resizeMap() {
+            const image = document.getElementById('image');
+            const highlightArea = document.getElementById('highlight-area');
+
+            const originalCoords = [80, 500, 140, 550]; // Original coordinates
+            const imageWidth = image.clientWidth; // Current image width
+            const imageHeight = image.clientHeight; // Current image height
+
+            const widthRatio = imageWidth / image.naturalWidth;
+            const heightRatio = imageHeight / image.naturalHeight;
+
+            const newCoords = originalCoords.map((coord, index) => {
+                return index % 2 === 0
+                    ? Math.round(coord * widthRatio)
+                    : Math.round(coord * heightRatio);
+            });
+            console.log(newCoords);
+            const [x1, y1, x2, y2] = newCoords;
+
+            // Update the position and size of the highlight area
+            highlightArea.style.left = x1 + 'px';
+            highlightArea.style.top = y1 + 'px';
+            highlightArea.style.width = (x2 - x1) + 'px';
+            highlightArea.style.height = (y2 - y1) + 'px';
+        }
+
+        window.addEventListener('resize', resizeMap);
+        window.addEventListener('load', resizeMap);
+    </script>
+</body>
+
+</html>
