@@ -31,8 +31,14 @@ area:hover {
     justify-content: center;
 }
 
-.btn {
+.productImage {
+    border-radius: 25px;
+    border-color: #7D8F59;
+    border-style: solid;
+    border-width: 5px;
+}
 
+.btn {
     background-color: #A4D3E1;
     color: #8B5E3C;
 }
@@ -48,6 +54,7 @@ area:hover {
     /* Sit on top */
     left: 0;
     top: 0;
+
     background-color: #A4D3E1;
     /* Black fallback color */
     background-color: #A4D3E1;
@@ -76,7 +83,7 @@ area:hover {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #8B5E3C;
     display: block;
     /* Display block instead of inline */
     transition: 0.3s;
