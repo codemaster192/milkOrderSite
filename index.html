@@ -41,7 +41,7 @@
     <!-- navigation menu -->
     <map name="imageMap">
         <area id="menuArea" shape="rect" coords="80, 500, 145, 555" alt="Menu" onclick="openNav()">
-        <area id="cartArea" shape="rect" coords="1240, 500, 1300, 555" alt="Cart" onclick="openNav()">
+        <area id="cartArea" shape="rect" coords="1240, 500, 1300, 555" alt="Cart">
     </map>
     <div id="mainNav" class="overlay">
         <!-- Button to close the overlay navigation -->
@@ -58,11 +58,12 @@
     <!-- slideshow -->
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <ul class="carousel-indicators">
+        <!-- <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
+        </ul> -->
+
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -76,20 +77,20 @@
             </div>
         </div>
         <!-- Left and right controls -->
+
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#demo" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
+        <!-- <button type="button" class="btn">Order Now</button> -->
     </div>
 
     <!-- product overview -->
-    <div class="row p-3">
-        <div class="col-2">
+    <div class="productIntro row p-3">
 
-        </div>
-        <div class="col-3">
+        <div class="col-8 col-md-4">
             <img src="image/Image_8.jpg" style="width: 100%; height: auto;">
         </div>
         <div class="col-5 text-center align-content-center">
@@ -97,7 +98,6 @@
             <p>Key benefits/features</p>
         </div>
     </div>
-
 
     <div class="jumbotron text-center footer" style="margin-bottom:0">
         <a href="#">CONTACT</a>
@@ -108,7 +108,7 @@
 <script>
     /* Open when someone clicks on the span element */
     function openNav() {
-        document.getElementById("mainNav").style.width = "30%";
+        document.getElementById("mainNav").style.width = "100%";
     }
 
     /* Close when someone clicks on the "x" symbol inside the overlay */

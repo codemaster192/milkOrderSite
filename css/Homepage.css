@@ -27,6 +27,16 @@ area:hover {
     color: #8B5E3C;
 }
 
+.productIntro {
+    justify-content: center;
+}
+
+.btn {
+
+    background-color: #A4D3E1;
+    color: #8B5E3C;
+}
+
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
