@@ -40,7 +40,8 @@ body {
 }
 
 .orderProductContent>button {
-    width: 70%;
+    font-size: 1.8rem;
+    width: 60%;
 }
 
 .modal-body {

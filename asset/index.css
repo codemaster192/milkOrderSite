@@ -199,10 +199,36 @@ img {
     color: #8B5E3C;
 }
 
+@media only screen and (min-width: 1080px) {
+    .textimage {
+        position: absolute;
+        top: 30px;
+        /* Adjust as needed */
+        right: 10%;
+        /* Adjust as needed */
+        width: 800px;
+        /* Adjust size of overlay image */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
 @media only screen and (max-width: 1080px) {
 
     .slidebutton {
         font-size: 1.2rem;
+    }
+
+    .textimage {
+        position: absolute;
+        top: 30px;
+        /* Adjust as needed */
+        right: 0;
+        /* Adjust as needed */
+        width: 450px;
+        /* Adjust size of overlay image */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 }
 
@@ -212,12 +238,24 @@ img {
         display: none;
     }
 
+    .textimage {
+        position: absolute;
+        top: 30px;
+        /* Adjust as needed */
+        right: 0;
+        /* Adjust as needed */
+        width: 400px;
+        /* Adjust size of overlay image */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
     .mainbar a.menuicon {
         display: block;
     }
 
     .slidebutton {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
@@ -230,13 +268,26 @@ img {
         right: 50%;
         border: none;
         cursor: pointer;
-        transform: translate(50%, -50%);
+        width: 40%;
+        transform: translate(50%, 0%);
         border-radius: 5px;
         text-align: center;
-        font-size: 0.6rem;
+        font-size: 1.8rem;
         background-color: #A4D3E1;
         color: #8B5E3C;
         z-index: 10;
+    }
+
+    .textimage {
+        position: absolute;
+        top: 30px;
+        /* Adjust as needed */
+        right: 0;
+        /* Adjust as needed */
+        width: 350px;
+        /* Adjust size of overlay image */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     #mobileNavBarOpenBtn {
@@ -259,12 +310,13 @@ img {
         position: absolute;
         bottom: 0;
         right: 50%;
-        transform: translate(50%, -50%);
+        width: 40%;
+        transform: translate(50%, 0%);
         border: none;
         cursor: pointer;
         border-radius: 5px;
         text-align: center;
-        font-size: 0.4rem;
+        font-size: 1.8rem;
         background-color: #A4D3E1;
         color: #8B5E3C;
         z-index: 10;
@@ -276,7 +328,7 @@ img {
         /* Adjust as needed */
         right: 0;
         /* Adjust as needed */
-        width: 300px;
+        width: 250px;
         /* Adjust size of overlay image */
         height: auto;
         /* Maintain aspect ratio */

@@ -52,158 +52,155 @@
     </ul>
 
 
+    <div class="orderMainContent row">
+        <div class="orderProductImg col-lg-5 col-8 col-md-8">
+            <img width="100%" src="./image/Image_8.jpg" alt="product" />
+        </div>
+        <div class="orderProductContent col-lg-5 col-8 col-md-8">
+            <div class="orderProductInfo">
+                <h4>
+                    Indulge in the creamy goodness of milk! 🥛 Try it in smoothies, with cereal, or
+                    just chilled—your taste buds will thank you! 😋✨
+                </h4>
+            </div>
+            <button onclick="clearHistory()" type="button" class="btn mx-auto d-block orderBtn" data-toggle="modal"
+                data-target="#myModal1">Add to Cart</button>
+        </div>
+    </div>
     <div class="container">
-        <div class="orderMainContent row">
-            <div class="orderProductImg col-lg-5 col-8 col-md-6">
-                <img width="100%" src="./image/Image_8.jpg" alt="product" />
-            </div>
-            <div class="orderProductContent col-lg-5 col-8 col-md-4">
-                <div class="orderProductInfo">
-                    <h4>
-                        Indulge in the creamy goodness of milk! 🥛 Try it in smoothies, with cereal, or
-                        just chilled—your taste buds will thank you! 😋✨
-                    </h4>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Select your collection location</h4>
+                        <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
+                    </div>
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div>
+                            <h5 style="display: inline-block;">collect location:</h5>
+                            <select class="locationSelector" onchange="showOpenDays()" id="locationSelector"
+                                name="location">
+                            </select>
+                        </div>
+
+                        <h2>Opening Days</h2>
+                        <div class="col-12 col-md-8" id="openDaysTable" style="display:none;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Time 1</th>
+                                        <th>Time 2</th>
+                                        <th>Time 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="daysBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn orderBtn" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
+                            data-target="#myModal2">Next</button>
+                    </div>
+
                 </div>
-                <button onclick="clearHistory()" type="button" class="btn mx-auto d-block orderBtn" data-toggle="modal"
-                    data-target="#myModal1">Add to Cart</button>
             </div>
         </div>
-        <div class="container">
-            <!-- The Modal -->
-            <div class="modal fade" id="myModal1">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Select your collection location</h4>
-                            <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
-                        </div>
+        <div class="modal fade" id="myModal2">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
 
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div>
-                                <h5 style="display: inline-block;">collect location:</h5>
-                                <select class="locationSelector" onchange="showOpenDays()" id="locationSelector"
-                                    name="location">
-                                </select>
-                            </div>
-
-                            <h2>Opening Days</h2>
-                            <div class="col-12 col-md-8" id="openDaysTable" style="display:none;">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Time 1</th>
-                                            <th>Time 2</th>
-                                            <th>Time 3</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="daysBody">
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn orderBtn" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
-                                data-target="#myModal2">Next</button>
-                        </div>
-
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">How much do you want?</h4>
+                        <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
                     </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h2>select number</h2>
+                        <div class="col-12 col-md-8" id="selectNumber" style="display:none;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>300ml</th>
+                                        <th>700ml</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="selectNumberBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
+                            data-target="#myModal1">Previous</button>
+                        <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
+                            data-target="#myModal3">Next</button>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="modal fade" id="myModal2">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">How much do you want?</h4>
-                            <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <h2>select number</h2>
-                            <div class="col-12 col-md-8" id="selectNumber" style="display:none;">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>300ml</th>
-                                            <th>700ml</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="selectNumberBody">
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
-                                data-target="#myModal1">Previous</button>
-                            <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
-                                data-target="#myModal3">Next</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="myModal3">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">You completed your order</h4>
-                            <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <h2>Your Order</h2>
-                            <div class="col-12 col-md-8" id="orderCheck" style="display:none;">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>300ml</th>
-                                            <th>700ml</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="orderCheckBody">
-                                    </tbody>
-                                </table>
-                                <h5 id="orderLocation">collect location: </h5>
-                            </div>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
-                                data-target="#myModal2">Previous</button>
-                            <button id="saveOrderBtnFake" type="button" class="btn orderBtn" data-dismiss="modal"
-                                disabled>
-                                Add to Cart</button>
-                            <button id="saveOrderBtn" type="button" style="display: none;" class="btn orderBtn"
-                                data-dismiss="modal">
-                                Add to Cart</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <div class="modal fade" id="myModal3">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">You completed your order</h4>
+                        <button type="button" class="close orderBtn" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h2>Your Order</h2>
+                        <div class="col-12 col-md-8" id="orderCheck" style="display:none;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>300ml</th>
+                                        <th>700ml</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderCheckBody">
+                                </tbody>
+                            </table>
+                            <h5 id="orderLocation">collect location: </h5>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn orderBtn" data-dismiss="modal" data-toggle="modal"
+                            data-target="#myModal2">Previous</button>
+                        <button id="saveOrderBtnFake" type="button" class="btn orderBtn" data-dismiss="modal" disabled>
+                            Add to Cart</button>
+                        <button id="saveOrderBtn" type="button" style="display: none;" class="btn orderBtn"
+                            data-dismiss="modal">
+                            Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="footer1">
         <!-- <div class="row svgimage">
