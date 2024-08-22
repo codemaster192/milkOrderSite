@@ -1,5 +1,8 @@
 body {
     background-image: url('../image/background_home.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     background-color: #F7F4F1;
     font-size: 1.4rem;
     font-weight: bold;
@@ -9,10 +12,9 @@ body {
 
 /* navbar */
 
-
-
 #mobileNavBarOpenBtn {
     position: sticky;
+    font-size: 2.5rem;
     display: none;
     cursor: pointer;
     margin-bottom: 10px;
@@ -33,6 +35,10 @@ body {
     background-color: #A4D3E1;
     transform: translate(-800px);
     transition-duration: 0.6s;
+}
+
+.slideimage {
+    transform: scale(1.5);
 }
 
 .mobileNavBar>li {
@@ -103,12 +109,6 @@ body {
     font-size: 2rem;
 }
 
-
-
-.slidebutton {
-    font-size: 2.5rem;
-}
-
 img {
     width: 100%;
     height: auto;
@@ -146,10 +146,22 @@ img {
 
 .productIntro>.text-center {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+}
+
+.textimage {
+    position: absolute;
+    top: 30px;
+    /* Adjust as needed */
+    right: 0;
+    /* Adjust as needed */
+    width: 400px;
+    /* Adjust size of overlay image */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 .productImage {
@@ -158,13 +170,26 @@ img {
     border-width: 3px;
 }
 
-.btn2 {
+.slidebutton {
     position: absolute;
     bottom: 0;
     right: 0;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    padding: 12px 24px;
+    padding: 12px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #A4D3E1;
+    color: #8B5E3C;
+    z-index: 10;
+}
+
+.productOrderBtn {
+    padding: 12px 12px;
+    width: 70%;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -174,26 +199,15 @@ img {
     color: #8B5E3C;
 }
 
-.btn1 {
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.8rem;
-    background-color: #A4D3E1;
-    color: #8B5E3C;
-}
+@media only screen and (max-width: 1080px) {
 
-@media only screen and (max-width: 1200px) {
-
-    .btn2,
-    .btn1 {
+    .slidebutton {
         font-size: 1.2rem;
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
+
     .mainbar a:not(:first-child) {
         display: none;
     }
@@ -202,17 +216,70 @@ img {
         display: block;
     }
 
-    .btn2,
-    .btn1 {
+    .slidebutton {
         font-size: 0.9rem;
     }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 720px) {
 
-    .btn2,
-    .btn1 {
+
+    .slidebutton {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        border: none;
+        cursor: pointer;
+        transform: translate(50%, -50%);
+        border-radius: 5px;
+        text-align: center;
         font-size: 0.6rem;
+        background-color: #A4D3E1;
+        color: #8B5E3C;
+        z-index: 10;
+    }
+
+    #mobileNavBarOpenBtn {
+        display: block;
+
+    }
+
+    .mobileNavBar {
+        display: flex;
+    }
+
+    #myMainbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+    .slidebutton {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%, -50%);
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 0.4rem;
+        background-color: #A4D3E1;
+        color: #8B5E3C;
+        z-index: 10;
+    }
+
+    .textimage {
+        position: absolute;
+        top: 30px;
+        /* Adjust as needed */
+        right: 0;
+        /* Adjust as needed */
+        width: 300px;
+        /* Adjust size of overlay image */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     #mobileNavBarOpenBtn {

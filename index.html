@@ -25,14 +25,15 @@
 <body>
     <!-- top image -->
     <div>
-        <img src="image/Image_4.jpg" alt="Image_4">
+        <img src="image/Image_4.jpg" class="bannerImage" alt="Image_4">
+        <img src="image/text.png" class="textimage">
     </div>
     <div id="mobileNavBarOpenBtn" class="mainbar sticky-top">
         <span onclick="mobilemenu()"><i class="fa fa-bars"></i></span>
+        <!-- <span><i class="fa-light fa-cart-circle-arrow-up"></i></span> -->
     </div>
     <div id="myMainbar" class="mainbar">
         <div>
-            <!-- <span><i class="fa-light fa-cart-circle-arrow-up"></i></span> -->
             <a href="./index.html">Home</a>
             <a href="./order.html">Order</a>
             <a href="javascript:void(0)">Contact</a>
@@ -58,51 +59,52 @@
             <a href="javascript:void(0)">FAQ</a>
         </li>
     </ul>
+    <!-- 
+    <div class="container p-5"> -->
+    <div class="productIntro row p-5">
 
-    <div class="container p-5">
-
-        <div id="demo" class="carousel slide borderimage row" data-ride="carousel">
-
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="image/Image_1.jpg" alt="Image_1" style="width: 100%; height: auto;">
-                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/image_2.jpg" alt="Image_2" style="width: 100%; height: auto;">
-                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/Image_3.jpg" alt="Image_3" style="width: 100%; height: auto;">
-                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
-                </div>
-            </div>
-            <!-- Left and right controls -->
-
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span><i class="fa-solid fa-angle-left text-muted slidebutton"></i></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span><i class="fa-solid fa-angle-right text-muted slidebutton"></i></span>
-            </a>
-            <!-- order -->
+        <div class="col-9 col-md-5">
+            <img src="image/Image_8.jpg" class="productImage" style="width: 100%; height: auto;">
         </div>
-        <!-- product overview -->
-        <div class="productIntro row p-5">
-
-            <div class="col-9 col-md-5">
-                <img src="image/Image_8.jpg" class="productImage" style="width: 100%; height: auto;">
-            </div>
-            <div class="col-9 col-md-5 text-center align-content-center">
-                <h5>Donkey milk is the milk produced by female donkeys, known for its nutritional and therapeutic
-                    properties. It has been used since ancient times for its potential health benefits. </h5>
-                <button type="button" class="btn1" onclick="orderNow()">Order Now</button>
-            </div>
-
+        <div class="col-9 col-md-5 row text-center align-content-center">
+            <h5>Donkey milk is the milk produced by female donkeys, known for its nutritional and therapeutic
+                properties. It has been used since ancient times for its potential health benefits. </h5>
+            <button type="button" class="productOrderBtn" onclick="orderNow()">Order Now</button>
         </div>
     </div>
+
+    <div id="demo" class="carousel slide borderimage row" data-ride="carousel">
+        <!-- The slideshow -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span><i class="fa-solid fa-angle-left text-muted"></i></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span><i class="fa-solid fa-angle-right text-muted"></i></span>
+        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/Image_1.jpg" class="slideimage" alt="Image_1" style="width: 100%; height: auto;">
+                <button type="button" class="slidebutton" onclick="orderNow()">Order
+                    Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="image/image_2.jpg" class="slideimage" alt="Image_2" style="width: 100%; height: auto;">
+                <button type="button" class="slidebutton" onclick="orderNow()">Order Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="image/Image_3.jpg" class="slideimage" alt="Image_3" style="width: 100%; height: auto;">
+                <button type="button" class="slidebutton" onclick="orderNow()">Order Now</button>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+
+
+        <!-- order -->
+    </div>
+    <!-- product overview -->
+
+    <!-- </div> -->
+
     <!-- slideshow -->
 
 

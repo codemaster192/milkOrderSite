@@ -1,7 +1,7 @@
 document.addEventListener('click', function (event) {
     const x = event.clientX;
     const screenWidth = window.innerWidth;
-    if (x > screenWidth / 2) {
+    if (x > screenWidth / 1.5) {
         document.getElementById("mobileNavBar").style.transform = "translate(-800px)";
         document.getElementById("mobileNavBar").style.transitionDuration = "1s";
     }
