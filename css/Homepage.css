@@ -1,13 +1,109 @@
 body {
+    background-image: url('../image/background_home.png');
     background-color: #F7F4F1;
-    color: #8B5E3C;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #8B5E3CFF;
+    margin: 0;
 }
 
-.responsive-image-container {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
+/* navbar */
+
+.mainbar {
+    position: sticky;
+    overflow: hidden;
+    background-color: #91A367;
+}
+
+#mobileNavBarOpenBtn {
+    position: sticky;
+    display: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.mobileNavBar {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 35px;
+    position: fixed;
+    z-index: 9990;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: #A4D3E1;
+    transform: translate(-800px);
+    transition-duration: 0.6s;
+}
+
+.mobileNavBar>li {
+
+    margin-top: 25px;
+}
+
+.mobileNavBar>li img {
+    display: flex;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.mobileNavBar>li a {
+    text-decoration: none;
+    color: #8B5E3C;
+
+}
+
+.mainbar>span i {
+    margin-left: 20px;
+}
+
+.newmainbar {
+    position: sticky;
+    overflow: hidden;
+    background-color: #91A367c8;
+}
+
+.mainbar>div {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.newmainbar>div {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#myMainbar a {
+    opacity: 1;
+    float: left;
+    display: block;
+    padding: 14px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    color: #8B5E3C;
+    text-align: center;
+    text-decoration: none;
+}
+
+#myMainbar a:hover {
+    border-bottom: solid 2px #8B5E3C;
+    line-height: 20px;
+}
+
+.mainbar .menuicon {
+    display: none;
+    font-size: 2rem;
+}
+
+
+
+.slidebutton {
+    font-size: 2.5rem;
 }
 
 img {
@@ -16,12 +112,26 @@ img {
     display: block;
 }
 
-area:hover {
-    cursor: pointer;
 
+.footer1>img {
+    /* display: flex; */
+    width: 120px;
+    border-radius: 50%;
+    /* justify-content: center; */
 }
 
-.footer>a {
+.footer1 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    background-color: #c9b9a9;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer1>a {
+    font-size: 1.2rem;
     text-decoration: none;
     display: grid;
     color: #8B5E3C;
@@ -31,88 +141,86 @@ area:hover {
     justify-content: center;
 }
 
+.productIntro>.text-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
 .productImage {
-    border-radius: 25px;
     border-color: #7D8F59;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
 }
 
 .btn {
-    background-color: #A4D3E1;
-    color: #8B5E3C;
-}
-
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 100%;
-    width: 0;
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-
-    background-color: #A4D3E1;
-    /* Black fallback color */
-    background-color: #A4D3E1;
-    /* Black w/opacity */
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-/* Position the content inside the overlay */
-.overlay-content {
-    position: relative;
-    top: 25%;
-    /* 25% from the top */
-    width: 100%;
-    /* 100% width */
-    text-align: center;
-    /* Centered text/links */
-    margin-top: 30px;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #8B5E3C;
-    display: block;
-    /* Display block instead of inline */
-    transition: 0.3s;
-    /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover,
-.overlay a:focus {
-    color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #A4D3E1;
+    color: #8B5E3C;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
+.btn1 {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #A4D3E1;
+    color: #8B5E3C;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .btn,
+    .btn1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainbar a:not(:first-child) {
+        display: none;
     }
 
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 15px;
+    .mainbar a.menuicon {
+        display: block;
+    }
+
+    .btn,
+    .btn1 {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+    .btn,
+    .btn1 {
+        font-size: 0.6rem;
+    }
+
+    #mobileNavBarOpenBtn {
+        display: block;
+    }
+
+    .mobileNavBar {
+        display: flex;
+    }
+
+    #myMainbar {
+        display: none;
     }
 }
