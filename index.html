@@ -18,12 +18,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- attribute coords of <map> tag is responsived -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            imageMapResize();
-        });
-    </script>
-    <link rel="stylesheet" href="css/Homepage.css">
+
+    <link rel="stylesheet" href="asset/index.css">
 </head>
 
 <body>
@@ -35,13 +31,14 @@
         <span onclick="mobilemenu()"><i class="fa fa-bars"></i></span>
     </div>
     <div id="myMainbar" class="mainbar">
-            <div>
-                <a href="javascript:void(0)">Home</a>
-                <a href="javascript:void(0)">Order</a>
-                <a href="javascript:void(0)">Contact</a>
-                <a href="javascript:void(0)">FAQ</a>
-               
-            </div>
+        <div>
+            <!-- <span><i class="fa-light fa-cart-circle-arrow-up"></i></span> -->
+            <a href="./index.html">Home</a>
+            <a href="./order.html">Order</a>
+            <a href="javascript:void(0)">Contact</a>
+            <a href="javascript:void(0)">FAQ</a>
+
+        </div>
     </div>
 
     <ul id="mobileNavBar" class="mobileNavBar">
@@ -49,10 +46,10 @@
             <img src="image/Image_6.jpg">
         </li>
         <li>
-            <a href="javascript:void(0)">Home</a>
+            <a href="./index.html">Home</a>
         </li>
         <li>
-            <a href="javascript:void(0)">Order</a>
+            <a href="./order.html">Order</a>
         </li>
         <li>
             <a href="javascript:void(0)">Contact</a>
@@ -63,23 +60,23 @@
     </ul>
 
     <div class="container p-5">
-        
+
         <div id="demo" class="carousel slide borderimage row" data-ride="carousel">
-            
+
 
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="image/Image_1.jpg" alt="Image_1" style="width: 100%; height: auto;">
-                    <button type="button" class="btn" onclick="">Order Now</button>
+                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
                 </div>
                 <div class="carousel-item">
                     <img src="image/image_2.jpg" alt="Image_2" style="width: 100%; height: auto;">
-                    <button type="button" class="btn" onclick="">Order Now</button>
+                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
                 </div>
                 <div class="carousel-item">
                     <img src="image/Image_3.jpg" alt="Image_3" style="width: 100%; height: auto;">
-                    <button type="button" class="btn" onclick="">Order Now</button>
+                    <button type="button" class="btn2" onclick="orderNow()">Order Now</button>
                 </div>
             </div>
             <!-- Left and right controls -->
@@ -99,14 +96,15 @@
                 <img src="image/Image_8.jpg" class="productImage" style="width: 100%; height: auto;">
             </div>
             <div class="col-9 col-md-5 text-center align-content-center">
-                <h5>Donkey milk is the milk produced by female donkeys, known for its nutritional and therapeutic properties. It has been used since ancient times for its potential health benefits. </h5>
-                <button type="button" class="btn1" onclick="">Order Now</button> 
+                <h5>Donkey milk is the milk produced by female donkeys, known for its nutritional and therapeutic
+                    properties. It has been used since ancient times for its potential health benefits. </h5>
+                <button type="button" class="btn1" onclick="orderNow()">Order Now</button>
             </div>
-                      
+
         </div>
     </div>
     <!-- slideshow -->
-    
+
 
     <div class="footer1">
         <!-- <div class="row svgimage">
@@ -118,67 +116,21 @@
         </div> -->
 
         <!-- <div class="row"> -->
-            <a href="#">CONTACT</a>
-            <a href="#">ABOUT US</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT US</a>
         <!-- </div> -->
         <!-- <div class="row"> -->
-            <img src="image/2.jpg" class="footer_logo">
+        <img src="image/2.jpg" class="footer_logo">
         <!-- </div> -->
-        
-        
+
+
     </div>
 
 
 
-    <script>
+    <script src="asset/index.js"></script>
 
-        function mobilemenu(){
-            document.getElementById("mobileNavBar").style.transform = "translate(0px)";
-            document.getElementById("mobileNavBar").style.transitionDuration = "0.6s";
 
-        }
-        function menubarDropdown() {
-            
-        }
-        // mainbar
-        window.onscroll = function () { myFunction() };
-    
-        var mainbar = document.getElementById("myMainbar");
-        var sticky = mainbar.offsetTop;
-    
-        function myFunction() {
-            
-            if (window.scrollY >= sticky) {
-                console.log(sticky);
-                mainbar.classList.add("sticky-top");
-                mainbar.classList.replace("mainbar", "newmainbar");
-                // mainbar.classList.add("mainbaropacity");
-            } else {
-                mainbar.classList.remove("sticky-top");
-                mainbar.classList.replace("newmainbar", "mainbar");
-            }
-        }
-        document.addEventListener('click', function (event) {
-            const x = event.clientX;
-            const screenWidth = window.innerWidth;
-            if (x > screenWidth / 2) {
-                document.getElementById("mobileNavBar").style.transform = "translate(-800px)";
-                document.getElementById("mobileNavBar").style.transitionDuration = "1s";
-            }
-            console.log(x);
-        });
-        /* Open when someone clicks on the span element */
-        // function openNav() {
-        //     document.getElementById("mainNav").style.width = "50%";
-        // }
-    
-        // /* Close when someone clicks on the "x" symbol inside the overlay */
-        // function closeNav() {
-        //     document.getElementById("mainNav").style.width = "0%";
-        // }
-    
-    
-    </script>
 </body>
 
 
